@@ -4,63 +4,80 @@ body
 {
     margin: 0;
     padding: 0; 
-    height: 150vh;
-    width: 100%;
+    height: 200vh;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 
     background-color: black;
-    background-image: url('Images/Border.jpg');
-    background-position: center center;
-    background-repeat: no-repeat;
-    background-size: cover;
+    
+    /*Controls the size of the border itself*/
+    border: 100px solid transparent;
+    /*Sets image as border instead of background*/
+    border-image: url("Images/Border.jpg") 550 round;
+    
+    box-sizing: border-box;
 }
+/*--Header--*/
 header
 {
-    height: 8%;
-    top: -40px;
-}
-h1
-{
+    width: 100%;
+    height: 20%;
+
+    outline: 0.5rem solid  rgb(167, 29, 167);
+    border-top-left-radius: 12vh;
+    border-top-right-radius: 12vh;
+
     text-align: center;
-    color: white;
-    font-size: 86px;
-
-    transform: translate(0px, 10px);
-
-    -webkit-text-stroke: 2.25px rgb(167, 29, 167);
 }
+header h1
+{
+    color: white;
+    font-size: 6rem;
+
+    -webkit-text-stroke: .40vh rgb(167, 29, 167);
+}
+/*--Section--*/
 section
 {
-    width: 89.28%;
-    height: 100%;
-    margin: auto;
+    height: 80%;
+    width: 100%;
+
+    outline: 0.5rem solid  rgb(167, 29, 167);
+    border-bottom-left-radius: 12vh;
+    border-bottom-right-radius: 12vh;    
 }
 nav
 {
+    height: 10%;
+    width: 100%;
+
+    outline: 0.5rem solid white;
     background-color: rgb(167, 29, 167);
-    background-position: horizontal;
+    font-size: 3rem;
+    
 
-    border-radius: 10px;
-    border: 5px solid white;
-
-    padding: 20px 10px;
-    text-align: center;
-    word-spacing: 40px;
-    font-size: 35px;
-    transform: translate(0px, 85px);
+    /*Adds equal spacing between objects in section*/
+    gap: 8rem;
+    /*Centers all objects in nav section*/
+    justify-content: center;
+    /*austomatically spaces, align and creates consistent behavior across all objects in section*/
+    display: flex;
 }
-a
+nav a
 {
-    word-spacing: 5px;
     color: white;
 }
 div
 {
-    transform: translate(48px, 88px);
-    width: 92%;
-    height: 55%;
+    height: 90%;
+    width: 100%;
 }
 img
 {
     width: 100%;
-    height: 100%;
+    height: 90%;
+
+    margin-top: 2%;
 }

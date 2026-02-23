@@ -1,0 +1,1 @@
+Made some minor improvements by making sure that when pages are being displayed on different size screens with different resolutions it will still appear the same.

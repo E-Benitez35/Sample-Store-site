@@ -1,190 +1,158 @@
 @charset "UTF-8";
-
+/*--Body--*/
 body
-{
+{   
     margin: 0;
     padding: 0; 
-    height: 150vh;
-    width: 100%;
-    
+    height: 200vh;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
     background-color: black;
-    background-image: url('Images/Border.jpg');
-    background-position: center center;
-    background-repeat: no-repeat;
-    background-size: cover;
+    
+    /*Controls the size of the border itself*/
+    border: 100px solid transparent;
+    /*Sets image as border instead of background*/
+    border-image: url("Images/Border.jpg") 550 round;
+    
+    box-sizing: border-box;
 }
+/*--Header--*/
 header
 {
-    height: 8%;
-    top: 40px;
+    width: 100%;
+    height: 20%;
+
+    outline: 0.5rem solid  rgb(167, 29, 167);
+    border-top-left-radius: 12vh;
+    border-top-right-radius: 12vh;
+
+    text-align: center;
 }
 header h1
 {
-    text-align: center;
     color: white;
-    font-size: 86px;
-    transform: translate(0px, 18px);
+    font-size: 6rem;
 
-    -webkit-text-stroke: 2.25px rgb(167, 29, 167);
+    -webkit-text-stroke: .40vh rgb(167, 29, 167);
 }
-#banner
+/*--Banner--*/
+div#banner
 {
     height: 50%;
-    width: 88.5%;
-    margin: auto;
-    padding: auto;
-    transform: translate(2px, 85px);
-    outline: 5px solid white;
-    border-top-left-radius: 10px;
-    border-top-right-radius: 10px;
-}  
-#banner img
-{
-    height: 100%;
     width: 100%;
+
+    outline: 0.5rem solid rgb(167, 29, 167);
+}  
+div#banner img
+{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
 }
+/*--Section--*/
 section
 {
-    width: 89.28%;
-    margin: auto;
     height: 10%;
+    width: 100%;
+
+    outline: 0.5rem solid  rgb(167, 29, 167);
+    
 }
 nav
 {
+    height: 85%;
+    width: 100%;
+
+    outline: 0.5rem solid white;
     background-color: rgb(167, 29, 167);
-    background-position: horizontal;
-
+    font-size: 3rem;
     
-    border: 5px solid white;
 
-    padding: 20px 10px;
-    text-align: center;
-    word-spacing: 40px;
-    font-size: 35px;
-    transform: translate(2px, 85px);
+    /*Adds equal spacing between objects in section*/
+    gap: 8rem;
+    /*Centers all objects in nav section*/
+    justify-content: center;
+    /*austomatically spaces, align and creates consistent behavior across all objects in section*/
+    display: flex;
 }
-a
+nav a
 {
-    word-spacing: 5px;
     color: white;
 }
-
+/*--Footer--*/
 footer
 {
-    margin: auto;
-    padding: 0;
-    background-color: transparent;
+    width: 100%;
+    height: 20%;
+
+    border-bottom-left-radius: 12vh;
+    border-bottom-right-radius: 12vh;
+
     display: flex;
-    width: 77.5%;
-    height: 40%;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: flex-start;
+    flex-wrap: nowrap;
 
-    transform: translate(0px, -530px);
+    outline: 0.5rem solid  rgb(167, 29, 167);
+    box-sizing: border-box;
 }
-
-div#info
+.info
 {
-    width: 83%;
-    height: 43%;
-    transform: translate(88px, 618px);
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    min-width: 0;
 }
-div#info h1#hours
-{
-    position: absolute;
-    margin-top: auto;
-    transform: translate(0px, -5px);
-
-    font-size: 35px;
+.info h1
+{ 
+    font-size: 2.35rem;
     color: white;
-}
-div#info p#Wdays
-{
-    color: white;
-    font-size: 15px;
-
-    text-align: center;
     
-    position: absolute;
-    transform: translate(50px, 20px);
-
+    margin: 0.5rem;
 }
-div#info p#Wends
+.info p
 {
     color: white;
-    font-size: 15px;
-
+}
+/*hours*/
+#hours, #Wdays, #Wends
+{
+    text-align: left;
+}
+/*Format days to appear side by side instead of vertically*/
+#daysformat
+{
+    display: flex;
+    margin: -0.1rem;
+    gap: 2rem;
+}
+/*contact*/
+#contact, #phone
+{
     text-align: center;
-    word-spacing: 30px;
-    position: absolute;
-    transform: translate(140px, 20px);
+}
+/*about*/
+#about, #description
+{
+    text-align: right;
+}
+/*links img*/
+.info img
+{
+    height: 5vh;
+    width: 5vh;
+    margin: 0.3rem;
+}
+#x
+{
+    height: 4.80vh;
+    width: 4.80vh;
 
-}
-div#info h1#contact
-{
-    position: absolute;
-    margin-top: auto;
-    transform: translate(60px, 70px);
-
-    font-size: 35px;
-    color: white;
-}
-div#info p#phone
-{
-    position: absolute;
-    font-size: 15px;
-    
-    color: white;
-    text-align: center;
-    transform: translate(60px, 90px);
-}
-div#info img#Facebook
-{
-    position: absolute;
-    height: 30px;
-    width: 30px;
-    transform: translate(50px, 125px);
-}
-div#info img#Instagram
-{
-    position: absolute;
-    height: 30px;
-    width: 30px;
-    transform: translate(85px, 125px);
-}
-div#info img#Snapchat
-{
-    position: absolute;
-    height: 30px;
-    width: 30px;
-    transform: translate(120px, 125px);
-}
-div#info img#x
-{
-    position: absolute;
-    height: 29px;
-    width: 29px;
-    transform: translate(160px, 125px);
-
-    outline: 1px solid white;
-}
-div#info h1#about
-{
-    position: absolute;
-    margin-top: auto;
-    transform: translate(500px, -5px);
-
-    font-size: 35px;
-    color: white;
-}
-div#info p#description
-{
-    position: absolute;
-    font-size: 15px;
-
-    height: 123px;
-    width: 582px;
-
-    
-    color: white;
-    text-align: center;
-    transform: translate(280px, 15px);
+    outline: 0.20vh solid white;
 }

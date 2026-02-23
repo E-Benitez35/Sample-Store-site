@@ -1,69 +1,85 @@
 @charset "UTF-09";
-
+/*--Body--*/
 body
-{
+{   
     margin: 0;
     padding: 0; 
-    height: 150vh;
-    width: 100%;
+    height: 200vh;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 
     background-color: black;
-    background-image: url('Images/Border.jpg');
-    background-position: center center;
-    background-repeat: no-repeat;
-    background-size: cover;
+    
+    /*Controls the size of the border itself*/
+    border: 100px solid transparent;
+    /*Sets image as border instead of background*/
+    border-image: url("Images/Border.jpg") 550 round;
+    
+    box-sizing: border-box;
 }
+/*--Header--*/
 header
 {
-    height: 8%;
-    bottom: -40px;
+    width: 100%;
+    height: 20%;
+
+    outline: 0.5rem solid  rgb(167, 29, 167);
+    border-top-left-radius: 12vh;
+    border-top-right-radius: 12vh;
+
+    text-align: center;
 }
 header h1
 {
-    text-align: center;
     color: white;
-    font-size: 86px;
+    font-size: 6rem;
 
-    transform: translate(0px, 10px);
-
-    -webkit-text-stroke: 2.25px rgb(167, 29, 167);
+    -webkit-text-stroke: .40vh rgb(167, 29, 167);
 }
-/*Main Section */
-section#main
+/*--Section--*/
+section
 {
-    width: 89.28%;
-    height: 100%;
-    margin: auto;
+    height: 80%;
+    width: 100%;
+
+    outline: 0.5rem solid  rgb(167, 29, 167);
+    border-bottom-left-radius: 12vh;
+    border-bottom-right-radius: 12vh;
+    
 }
 nav
 {
+    height: 10%;
+    width: 100%;
+
+    outline: 0.5rem solid white;
     background-color: rgb(167, 29, 167);
-    background-position: horizontal;
+    font-size: 3rem;
+    
 
-    border-radius: 10px;
-    border: 5px solid white;
-
-    padding: 20px 10px;
-    text-align: center;
-    word-spacing: 40px;
-    font-size: 35px;
-    transform: translate(0px, 85px);
+    /*Adds equal spacing between objects in section*/
+    gap: 8rem;
+    /*Centers all objects in nav section*/
+    justify-content: center;
+    /*austomatically spaces, align and creates consistent behavior across all objects in section*/
+    display: flex;
 }
-a
+nav a
 {
-    word-spacing: 5px;
     color: white;
 }
-
 /*Variety section edit*/
 section#Variety
 {
     display: -webkit-flex;
     -webkit-flex-flow: row wrap;
     flex-flow: row wrap;
+    gap: 2rem;
 
     width: auto;
-    height: auto;
+    height: 90%;
 }
 section#Variety div
 {
@@ -73,12 +89,12 @@ section#Variety div
     border-bottom-left-radius: 20px;
     border-bottom-right-radius: 20px;
 
-    margin: 30px;
-    height: 180px;
-    width: 200px;
+    height: 12rem;
+    width: 12rem;
 
     background-color: black;
-    transform: translate(60px, 100px);
+
+    margin: 1.2rem;
 }
 section#Variety div h1
 {
