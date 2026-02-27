@@ -23,10 +23,23 @@
                         <!--Calculator-->
                 </table>
             </form>
-            <div id ="buttonFormat">
-                <button type="button" onclick="buy()">Buy</button>
-            </div>
         </section>
+        <footer>
+            <!--Subtotal-->
+            <div class="FormatFooter">
+                <h1>Subtotal</h1>
+                <h2>$<span id="sub">0.00</span></h2>
+            </div>
+            <!--PayButton-->
+            <div class="FormatFooter">
+                <button type="button" onclick="buy()">Check out</button>
+            </div>
+            <!--Quantity-->
+            <div class="FormatFooter">
+                <h1>Total Items</h1>
+                <h2><span id="items">0</span></h2>
+            </div>
+        </footer>
     </body>
     
 </html>

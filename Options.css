@@ -4,7 +4,7 @@ body
 {   
     margin: 0;
     padding: 0; 
-    height: 200vh;
+    height: 300vh;
 
     display: flex;
     flex-direction: column;
@@ -25,9 +25,15 @@ header
     width: 100%;
     height: 20%;
 
+    overflow: hidden;
+
     outline: 0.5rem solid  rgb(167, 29, 167);
     border-top-left-radius: 12vh;
     border-top-right-radius: 12vh;
+
+    background-image: url("Images/Options.jpg");
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
 
     text-align: center;
 }
@@ -44,6 +50,9 @@ section
     height: 80%;
     width: 100%;
 
+    overflow: hidden;
+    box-sizing: border-box;
+
     outline: 0.5rem solid  rgb(167, 29, 167);
     border-bottom-left-radius: 12vh;
     border-bottom-right-radius: 12vh;
@@ -58,7 +67,6 @@ nav
     background-color: rgb(167, 29, 167);
     font-size: 3rem;
     
-
     /*Adds equal spacing between objects in section*/
     gap: 8rem;
     /*Centers all objects in nav section*/
@@ -71,41 +79,81 @@ nav a
     color: white;
 }
 /*Variety section edit*/
-section#Variety
+#Variety
 {
-    display: -webkit-flex;
-    -webkit-flex-flow: row wrap;
-    flex-flow: row wrap;
-    gap: 2rem;
+    display: flex;
+    flex-wrap: wrap;
+
+    gap: 4rem;
 
     width: auto;
     height: 90%;
+    margin: 3rem;
 }
-section#Variety div
+@media (max-width: 1200px) or (max-height: 700px)
+{
+    #Variety
+    {
+        overflow-y: auto;
+    }
+}
+.Item
+{
+    width:200px;
+    height:150px;
+    perspective:1000px;
+    cursor: pointer;
+}
+.Inner
+{   width:100%;
+    height:100%;
+    position:relative;
+    transform-style: preserve-3d;
+    transition: transform 0.6s;
+}
+.Item:hover .Inner
+{
+    transform: rotateY(180deg);
+}
+.Front, .Back
 {
     border: 5px solid purple;
-    border-top-left-radius: 20px;
-    border-top-right-radius: 20px;
-    border-bottom-left-radius: 20px;
-    border-bottom-right-radius: 20px;
+    border-radius: 20px;
 
-    height: 12rem;
-    width: 12rem;
+    height: 14rem;
+    width: 14rem;
+
+    text-align: center;
 
     background-color: black;
 
-    margin: 1.2rem;
+    margin: 0rem;
+
+    position: absolute;
+    backface-visibility:hidden;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 }
-section#Variety div h1
+.Back
+{
+    transform: rotateY(180deg);
+    background-color: white;
+}
+#Image
+{
+    height: 100%;
+    width: 100%;
+}
+/*Front Item card formatting*/
+#Variety h1
 {
     text-align: center;
     font-size: 30px;
     letter-spacing: 0.1em;
     color: white;
-
-    transform: translate(0px, -15px);
 }
-section#Variety div p
+#Variety p
 {
     text-align: center;
     font-size: 0.85em;
